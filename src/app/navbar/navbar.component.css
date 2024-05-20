@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; 
+  padding: 10px 0;
+}
+
+.navbar button {
+  color: #333; /* Dark text color */
+  margin: 0 10px;
+}
+
+.navbar button:hover {
+  background-color: #ddd; /* Light gray background color on hover */
+}
+
+.navbar button.active {
+  background-color: #ccc; /* Slightly darker background color for active button */
+}

@@ -1,0 +1,54 @@
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-list h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.todo-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.todo-list th, .todo-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.todo-list th {
+  background-color: #f2f2f2;
+}
+
+.todo-list tr:hover {
+  background-color: #f2f2f2;
+}
+
+.action-icon {
+  background-color: #4CAF50;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.action-icon-delete{
+  margin-top: 20px;
+  background-color:rgb(223, 104, 104);
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width:80px;
+  font-size: 16px;
+  float:right ;
+}

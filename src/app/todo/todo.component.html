@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="title">Todo List</h1>
+  <div class="add-todo">
+    <button class="add-btn" (click)="openAddTodoForm()">Add</button>
+  </div>
+  <div *ngIf="showAddTodoForm">
+    <!-- Add Todo Form -->
+    <form class="add-todo-form" (submit)="addOrEditTodo()" #form="ngForm">
+      <input type="text" placeholder="title" required minlength="3" class="todo-input" [(ngModel)]="newTodoModel.title" name="title">
+      <br/><br/>
+      <input type="text" placeholder="description" required minlength="3" class="todo-input" [(ngModel)]="newTodoModel.description" name="description" #description="ngModel">
+      <br/><br/>
+      <input type="text" placeholder="Status" required minlength="3" class="todo-input" [(ngModel)]="newTodoModel.status" name="status" #status="ngModel">
+      <br/><br/>
+      <button class="add-btn" type="submit">{{ isNewTodo ? 'Save' : 'Edit' }}</button>
+    </form>
+  </div>
+  <div *ngIf="todos.length === 0">
+    <p>No todos yet. Add one now!</p>
+  </div>
+  <app-todolist [todos]="todos" [userId]="userService.userId" (editTodo)="editSelectedTodo($event)"></app-todolist>
+</div>

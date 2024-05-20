@@ -1,0 +1,10 @@
+<div class="navbar">
+  <button mat-button routerLink="/todos" routerLinkActive="active">To-Do List</button>
+  <ng-container *ngIf="isLoggedIn; else showLogin">
+    <button mat-button (click)="logout()">Logout</button>
+  </ng-container>
+  <ng-template #showLogin>
+    <button mat-button routerLink="/" routerLinkActive="active">Login</button>
+    <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
+  </ng-template>
+</div>
